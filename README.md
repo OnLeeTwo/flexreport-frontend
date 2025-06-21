@@ -1,39 +1,125 @@
-# flexreport-frontend
+# FlexReport Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This is the **Vue 3 + TypeScript + Tailwind CSS** frontend for the FlexReport platform. It connects to the Laravel backend to let users log in, manage report templates, and generate downloadable PDF/Excel reports using dynamic filters and column selections.
 
-## Recommended IDE Setup
+[Url to website](https://vercel.app)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Type Support for `.vue` Imports in TS
+## ⚙️ Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- [Vue 3](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [PrimeVue](https://www.primefaces.org/primevue/) (UI Components)
+- [Pinia](https://pinia.vuejs.org/) (State management)
+- [Laravel](https://laravel.com/) (Backend)
+- [jspdf](https://www.npmjs.com/package/jspdf) (PDF generation)
+- [SheetJS](https://www.npmjs.com/package/xlsx) (Excel generation)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🚀 Features
 
-## Project Setup
+- 🔐 Login with JWT
+- 📋 Create dynamic report templates from database schema
+- 📄 Generate and download reports as **PDF** or **Excel**
+- 🔎 Smart filtering (text dropdown, number/date range, boolean options)
+- ✅ Save templates for reuse
+- 👤 Auth-based access to user templates
 
-```sh
+---
+
+## 🧪 Test User
+
+To try the app immediately, use this test account:
+
+```txt
+Email:    admin@example.com
+Password: secret123
+```
+
+---
+
+## 🛠️ Project Setup
+
+### 1. Install dependencies
+
+```bash
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### 2. Set environment variables
 
-```sh
-pnpm dev
+Create a `.env` file:
+
+```bash
+cp .env.example .env
 ```
 
-### Type-Check, Compile and Minify for Production
+Then edit it to point to your deployed Laravel backend:
 
-```sh
-pnpm build
+```env
+VITE_API_BASE_URL=https://flexreport-backend-abcdef.a.run.app/api
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+> Replace with your actual Cloud Run backend URL.
 
-```sh
-pnpm lint
+### 3. Run the development server
+
+```bash
+pnpm run dev
 ```
+
+---
+
+## 📁 Project Structure
+
+```txt
+src/
+├── components/
+│   ├── LoginPage.vue
+│   ├── ReportPage.vue
+│   ├── CreateTemplatePage.vue
+│   └── ...
+├── auth/
+│   └── useAuth.ts
+├── lib/
+│   └── axios.ts
+├── router/
+│   └── routes.ts
+├── types/
+│   └── index.ts
+├── App.vue
+├── main.ts
+└── ...
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
+pnpm run build
+```
+
+---
+
+## 🧪 Lint and Format
+
+```bash
+pnpm run lint
+```
+
+---
+
+## 📝 License
+
+This project is open-source and available under the [MIT license](LICENSE).
+
+---
+
+## 👨‍💻 Author
+
+Developed by [Owent Ovandy](https://github.com/OnLeeTwo)
