@@ -58,13 +58,11 @@ Create a `.env` file:
 cp .env.example .env
 ```
 
-Then edit it to point to your deployed Laravel backend:
+Then edit it to point to your deployed backend:
 
 ```env
 VITE_API_BASE_URL=https://flexreport-backend-abcdef.a.run.app/api
 ```
-
-> Replace with your actual Cloud Run backend URL.
 
 ### 3. Run the development server
 
