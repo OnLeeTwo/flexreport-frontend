@@ -2,7 +2,7 @@
 
 This is the **Vue 3 + TypeScript + Tailwind CSS** frontend for the FlexReport platform. It connects to the Laravel backend to let users log in, manage report templates, and generate downloadable PDF/Excel reports using dynamic filters and column selections.
 
-[Url to website](https://vercel.app)
+[Url to website]([https://vercel.app](https://flexreport-frontend-owent.vercel.app)
 
 ---
 
