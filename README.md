@@ -2,7 +2,7 @@
 
 This is the **Vue 3 + TypeScript + Tailwind CSS** frontend for the FlexReport platform. It connects to the Laravel backend to let users log in, manage report templates, and generate downloadable PDF/Excel reports using dynamic filters and column selections.
 
-[Url to website](https://vercel.app)
+[Url to website]([https://vercel.app](https://flexreport-frontend-owent.vercel.app)
 
 ---
 
@@ -58,13 +58,11 @@ Create a `.env` file:
 cp .env.example .env
 ```
 
-Then edit it to point to your deployed Laravel backend:
+Then edit it to point to your deployed backend:
 
 ```env
 VITE_API_BASE_URL=https://flexreport-backend-abcdef.a.run.app/api
 ```
-
-> Replace with your actual Cloud Run backend URL.
 
 ### 3. Run the development server
 
