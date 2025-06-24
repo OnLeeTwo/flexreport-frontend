@@ -36,7 +36,7 @@ onMounted(async () => {
       } else if (col.data_type === 'bigint') {
         filters.value[col.column_name] = { min: null, max: null }
       } else if (col.data_type === 'date') {
-        filters.value[col.column_name] = { start: null, end: null }
+        filters.value[col.column_name] = { range: null}
       }
     }
   } catch (error) {
@@ -99,7 +99,7 @@ const saveTemplate = async () => {
       } else if (col?.data_type === 'bigint') {
         filters.value[key] = { min: null, max: null }
       } else if (col?.data_type === 'date') {
-        filters.value[key] = { start: null, end: null }
+        filters.value[key] = { range: null, }
       }
     })
 
@@ -271,7 +271,7 @@ const formatColumnName = (columnName: string) => {
                     <!-- DATE → Range -->
                     <div v-else-if="col.data_type === 'date'">
                       <DatePicker
-                        v-model="filters[col.column_name].start"
+                        v-model="filters[col.column_name].range"
                         placeholder="Select date range"
                         showIcon
                         size="small"
